@@ -3,4 +3,10 @@
 */
 
 function wait(n) {
+    return new Promise(function(resolve){
+        setTimeout(() => {
+            resolve("hello world");
+        }, n);
+    })
 }
+const myWork = wait(2000).then(res=> console.log(res));
